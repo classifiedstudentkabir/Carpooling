@@ -1,4 +1,4 @@
-# Carpooling GDG Platform
+# Carpooling GDG (Solution Challenge prototype )
 
 A web-based carpooling platform designed to connect drivers and travelers, making ride-sharing easy and efficient.
 
