@@ -2,6 +2,13 @@
 
 A web-based carpooling platform designed to connect drivers and travelers, making ride-sharing easy and efficient.
 
+## Project Preview
+<!-- Add your project screenshots here -->
+
+![Project Preview 1]()
+
+![Project Preview 2]()
+
 ## Features
 
 - **User Management**: Secure account creation and management
@@ -31,16 +38,24 @@ A web-based carpooling platform designed to connect drivers and travelers, makin
 - JavaScript
 - Google Fonts (Poppins)
 
-## Setup Instructions
+## How to Clone This Repository
 
-1. Clone the repository
-2. Open `index.html` in your web browser
-3. Navigate through the platform using the intuitive interface
+1. Open your terminal or command prompt
+2. Navigate to the directory where you want to clone the project
+3. Run the following command:
+   ```bash
+   git clone https://github.com/classifiedstudentkabir/Carpooling.git
+   ```
+4. Navigate into the project directory:
+   ```bash
+   cd Carpooling
+   ```
+5. Open `index.html` in your web browser to start using the application
 
-## Contributing
+## Team Members
 
-Feel free to fork this repository and submit pull requests for any improvements.
+This project was built with the collaboration of:
 
-## License
-
-© 2024 AutoCarPool. All rights reserved. 
+- **Swara** - Project Lead
+- **Yash Khatra** - Developer
+- **Yash Mehta** - Developer 
