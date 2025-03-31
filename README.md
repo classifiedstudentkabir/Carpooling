@@ -5,7 +5,7 @@ A web-based carpooling platform designed to connect drivers and travelers, makin
 ## Project Preview
 <!-- Add your project screenshots here -->
 
-![Screenshot 2025-03-31 143319](https://github.com/user-attachments/assets/d48a342b-0d1d-4c15-bd06-b7d6f0bf1703)
+
 ![Screenshot 2025-03-31 142924](https://github.com/user-attachments/assets/e5381156-3c63-4281-847b-b2db0581a16b)
 ![Screenshot 2025-03-31 143056](https://github.com/user-attachments/assets/1ad52e52-4bcb-4b79-bba8-7bf572c70cbd)
 ![Screenshot 2025-03-31 143113](https://github.com/user-attachments/assets/43e27f0a-aad7-4530-b6b1-eb926ac8f72f)
@@ -14,7 +14,7 @@ A web-based carpooling platform designed to connect drivers and travelers, makin
 ![Screenshot 2025-03-31 143216](https://github.com/user-attachments/assets/359962db-cdde-4176-aef9-4f0f162e2559)
 ![Screenshot 2025-03-31 143235](https://github.com/user-attachments/assets/551f33a2-9468-4ce8-9494-3f81cdda137d)
 ![Screenshot 2025-03-31 143300](https://github.com/user-attachments/assets/537321c9-23b4-4657-bdd5-942f20b64403)
-
+![Screenshot 2025-03-31 143319](https://github.com/user-attachments/assets/d48a342b-0d1d-4c15-bd06-b7d6f0bf1703)
 ## Features
 
 - **User Management**: Secure account creation and management
