@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Available Travelers - AutoCarPool</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      background: #4B0082;
+      color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    .main-content {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .list-section {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    .list-section h2 {
+      color: #4B0082;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .traveler-list {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .traveler-card {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #eee;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .traveler-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .traveler-info {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+    }
+    .traveler-details h3 {
+      color: #4B0082;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .traveler-details p {
+      color: #666;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .traveler-stats {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .stat {
+      background: #fff;
+      padding: 0.3rem 0.8rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      color: #4B0082;
+    }
+    .approve-btn {
+      background: #4B0082;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .approve-btn:hover {
+      background: #6A0DAD;
+    }
+    .features {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    .features h3 {
+      color: #4B0082;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .feature-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .feature-item p {
+      margin: 0;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .footer {
+      background: #4B0082;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: auto;
+    }
+    .footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>AutoCarPool</h1>
+  </header>
+
+  <main class="main-content">
+    <section class="list-section">
+      <h2>Available Travelers</h2>
+      <div class="traveler-list">
+        <div class="traveler-card">
+          <div class="traveler-info">
+            <div class="traveler-details">
+              <h3>Sarah Wilson</h3>
+              <p>Starting: Airport</p>
+              <p>Destination: Downtown</p>
+              <p>Time: 2:00 PM</p>
+              <div class="traveler-stats">
+                <span class="stat">👤 1 Passenger</span>
+                <span class="stat">🎒 1 Bag</span>
+                <span class="stat">💰 $25</span>
+              </div>
+            </div>
+            <button class="approve-btn" onclick="alert('Traveler Approved!')">Approve</button>
+          </div>
+        </div>
+        <div class="traveler-card">
+          <div class="traveler-info">
+            <div class="traveler-details">
+              <h3>David Brown</h3>
+              <p>Starting: Mall</p>
+              <p>Destination: University</p>
+              <p>Time: 3:30 PM</p>
+              <div class="traveler-stats">
+                <span class="stat">👥 2 Passengers</span>
+                <span class="stat">🎒 2 Bags</span>
+                <span class="stat">💰 $40</span>
+              </div>
+            </div>
+            <button class="approve-btn" onclick="alert('Traveler Approved!')">Approve</button>
+          </div>
+        </div>
+        <div class="traveler-card">
+          <div class="traveler-info">
+            <div class="traveler-details">
+              <h3>Emma Davis</h3>
+              <p>Starting: City Center</p>
+              <p>Destination: Suburbs</p>
+              <p>Time: 5:00 PM</p>
+              <div class="traveler-stats">
+                <span class="stat">👤 1 Passenger</span>
+                <span class="stat">🎒 1 Bag</span>
+                <span class="stat">💰 $30</span>
+              </div>
+            </div>
+            <button class="approve-btn" onclick="alert('Traveler Approved!')">Approve</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <h3>Platform Features</h3>
+      <div class="features-grid">
+        <div class="feature-item">
+          <p>Security</p>
+        </div>
+        <div class="feature-item">
+          <p>Live Location Sharing</p>
+        </div>
+        <div class="feature-item">
+          <p>Student-Only Options</p>
+        </div>
+        <div class="feature-item">
+          <p>SOS Button</p>
+        </div>
+        <div class="feature-item">
+          <p>AI Payment Splits</p>
+        </div>
+        <div class="feature-item">
+          <p>Fare Negotiation</p>
+        </div>
+        <div class="feature-item">
+          <p>Multilingual Support</p>
+        </div>
+        <div class="feature-item">
+          <p>Women-Only Carpool</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 AutoCarPool. All rights reserved.</p>
+  </footer>
+</body>
+</html>

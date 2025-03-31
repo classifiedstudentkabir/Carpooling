@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login/Register - AutoCarPool</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #ff4931;
+      transition: all .5s;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .form-box {
+      position: relative;
+      width: 380px;
+      height: 520px;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      z-index: 2;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    }
+    .background-box {
+      position: absolute;
+      width: 440px;
+      height: 520px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 12px;
+      transform: rotate(-5deg);
+    }
+    .login-form, .register-form {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 32px;
+      transition: transform 0.6s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+    }
+    .login-form {
+      transform: translateX(0);
+    }
+    .register-form {
+      transform: translateX(100%);
+    }
+    .form-box.show-register .login-form {
+      transform: translateX(-100%);
+    }
+    .form-box.show-register .register-form {
+      transform: translateX(0);
+    }
+    h3 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+    .input-group {
+      position: relative;
+      width: 100%;
+      margin-bottom: 35px;
+    }
+    .input-group input {
+      width: 100%;
+      padding: 12px 0;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      outline: none;
+      font-size: 15px;
+      color: #333;
+      background: transparent;
+    }
+    .input-group label {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      padding: 0;
+      color: #999;
+      font-size: 13px;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    .input-group input:focus {
+      border-bottom-color: #e0b722;
+    }
+    .input-group input:focus + label {
+      color: #e0b722;
+    }
+    button[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      background: #e0b722;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 20px;
+    }
+    button[type="submit"]:hover {
+      background: #c9a41f;
+    }
+    .toggle-form {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      text-align: center;
+      width: 100%;
+    }
+    .toggle-form p {
+      color: #666;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    .toggle-btn {
+      background: transparent;
+      color: #e0b722;
+      font-size: 14px;
+      padding: 10px 30px;
+      border: 1px solid #e0b722;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .toggle-btn:hover {
+      background: rgba(224,183,34,0.1);
+    }
+    body.register-active {
+      background: #e0b722;
+    }
+    .form-content {
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    /* Specific styles for register form */
+    .register-form .input-group {
+      margin-bottom: 25px;
+    }
+    .register-form button[type="submit"] {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="background-box"></div>
+    <div class="form-box">
+      <form class="login-form" action="selection.html" method="POST" onsubmit="return validateLogin(event)">
+        <h3>Login</h3>
+        <div class="form-content">
+          <div class="input-group">
+            <input type="email" name="email" required>
+            <label>Email</label>
+          </div>
+          <div class="input-group">
+            <input type="password" name="password" required>
+            <label>Password</label>
+          </div>
+          <button type="submit">Login</button>
+        </div>
+        <div class="toggle-form">
+          <p>Don't have an account?</p>
+          <button type="button" class="toggle-btn" onclick="toggleForm()">Register</button>
+        </div>
+      </form>
+
+      <form class="register-form" action="selection.html" method="POST" onsubmit="return validateRegister(event)">
+        <h3>Register</h3>
+        <div class="form-content">
+          <div class="input-group">
+            <input type="text" name="fullName" required>
+            <label>Full Name</label>
+          </div>
+          <div class="input-group">
+            <input type="email" name="email" required>
+            <label>Email</label>
+          </div>
+          <div class="input-group">
+            <input type="text" name="username" required>
+            <label>User Name</label>
+          </div>
+          <div class="input-group">
+            <input type="password" name="password" required>
+            <label>Password</label>
+          </div>
+          <button type="submit">Register</button>
+        </div>
+        <div class="toggle-form">
+          <p>Already an user?</p>
+          <button type="button" class="toggle-btn" onclick="toggleForm()">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function toggleForm() {
+      const formBox = document.querySelector('.form-box');
+      const body = document.body;
+      formBox.classList.toggle('show-register');
+      body.classList.toggle('register-active');
+    }
+
+    function validateLogin(event) {
+      event.preventDefault();
+      const email = document.querySelector('.login-form input[name="email"]').value;
+      const password = document.querySelector('.login-form input[name="password"]').value;
+
+      if (!email || !password) {
+        alert('Please fill in all fields');
+        return false;
+      }
+
+      if (!isValidEmail(email)) {
+        alert('Please enter a valid email address');
+        return false;
+      }
+
+      // For demo purposes, redirect to selection.html
+      window.location.href = 'selection.html';
+      return false;
+    }
+
+    function validateRegister(event) {
+      event.preventDefault();
+      const form = document.querySelector('.register-form');
+      const fullName = form.querySelector('input[name="fullName"]').value;
+      const email = form.querySelector('input[name="email"]').value;
+      const username = form.querySelector('input[name="username"]').value;
+      const password = form.querySelector('input[name="password"]').value;
+
+      if (!fullName || !email || !username || !password) {
+        alert('Please fill in all fields');
+        return false;
+      }
+
+      if (!isValidEmail(email)) {
+        alert('Please enter a valid email address');
+        return false;
+      }
+
+      if (password.length < 8) {
+        alert('Password must be at least 8 characters long');
+        return false;
+      }
+
+      // For demo purposes, redirect to selection.html
+      window.location.href = 'selection.html';
+      return false;
+    }
+
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+
+    // Add floating label effect
+    const inputs = document.querySelectorAll('.input-group input');
+    inputs.forEach(input => {
+      if (input.value) {
+        input.parentElement.classList.add('focused');
+      }
+      
+      input.addEventListener('focus', () => {
+        input.parentElement.classList.add('focused');
+      });
+      
+      input.addEventListener('blur', () => {
+        if (!input.value) {
+          input.parentElement.classList.remove('focused');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

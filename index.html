@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoCarPool - Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      background: #4B0082;
+      color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin: 0;
+    }
+    .admin-badge {
+      background: #e0b722;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .main-content {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .welcome-section {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .welcome-section h2 {
+      color: #4B0082;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .welcome-section p {
+      color: #666;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 250px);
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .dashboard-item:nth-child(5) {
+      grid-column: 1 / 2;
+      transform: translateX(55%);
+    }
+    .dashboard-item:nth-child(6) {
+      grid-column: 2 / 3;
+      transform: translateX(55%);
+    }
+    .dashboard-item:nth-child(7) {
+      grid-column: 3 / 4;
+      transform: translateX(55%);
+    }
+    .dashboard-item {
+      text-decoration: none;
+      cursor: pointer;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      min-height: 120px;
+      display: block;
+    }
+    .dashboard-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Colored headings for each box */
+    .dashboard-item:nth-child(1) h3 {
+      color: #4169E1;  /* Blue for User Management */
+    }
+    .dashboard-item:nth-child(2) h3 {
+      color: #3CB371;  /* Green for Role Management */
+    }
+    .dashboard-item:nth-child(3) h3 {
+      color: #8B008B;  /* Purple for Traveler Analytics */
+    }
+    .dashboard-item:nth-child(4) h3 {
+      color: #CD5C5C;  /* Red for Driver Analytics */
+    }
+    .dashboard-item:nth-child(5) h3 {
+      color: #8B008B;  /* Purple for Active Travelers (swapped) */
+    }
+    .dashboard-item:nth-child(6) h3 {
+      color: #3CB371;  /* Green for Active Drivers */
+    }
+    .dashboard-item:nth-child(7) h3 {
+      color: #4169E1;  /* Blue for System Features (swapped) */
+    }
+
+    .dashboard-item p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    .dashboard-item:hover {
+      transform: translateY(-5px) translateX(55%);
+    }
+    .dashboard-item:nth-child(-n+4):hover {
+      transform: translateY(-5px);
+    }
+    .footer {
+      background: #4B0082;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: auto;
+    }
+    .footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>AutoCarPool</h1>
+    <span class="admin-badge">Admin Dashboard</span>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="welcome-section">
+        <h2>Welcome Admin of CarPooling</h2>
+        <p>Manage and monitor all carpooling activities from your dashboard.</p>
+      </div>
+
+      <div class="dashboard-grid">
+        <a href="features.html" class="dashboard-item">
+          <h3>User Management</h3>
+          <p>Manage user accounts and permissions</p>
+        </a>
+        <a href="selection.html" class="dashboard-item">
+          <h3>Role Management</h3>
+          <p>Configure and manage user roles</p>
+        </a>
+        <a href="traveler.html" class="dashboard-item">
+          <h3>Traveler Analytics</h3>
+          <p>View and analyze traveler statistics</p>
+        </a>
+        <a href="driver.html" class="dashboard-item">
+          <h3>Driver Analytics</h3>
+          <p>Monitor driver performance and ratings</p>
+        </a>
+        <a href="traveler_list.html" class="dashboard-item">
+          <h3>Active Travelers</h3>
+          <p>View and manage current traveler requests</p>
+        </a>
+        <a href="driver_list.html" class="dashboard-item">
+          <h3>Active Drivers</h3>
+          <p>Monitor active drivers and their routes</p>
+        </a>
+        <a href="login.html" class="dashboard-item">
+          <h3>System Features</h3>
+          <p>Configure and customize platform features</p>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 AutoCarPool. All rights reserved.</p>
+  </footer>
+</body>
+</html>

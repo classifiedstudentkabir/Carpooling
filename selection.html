@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Role - AutoCarPool</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background: #4B0082;
+      color: white;
+      padding: 1rem;
+    }
+
+    .header h1 {
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      flex: 1;
+    }
+
+    .welcome-section {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .welcome-section h2 {
+      color: #4B0082;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .welcome-section p {
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    .role-selection {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .role-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .role-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .role-card h3 {
+      color: #4B0082;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .role-card p {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .role-card.driver {
+      border-top: 4px solid #4169E1;
+      transition: all 0.3s ease;
+    }
+
+    .role-card.traveler {
+      border-top: 4px solid #3CB371;
+      transition: all 0.3s ease;
+    }
+
+    .role-card.driver:hover {
+      background: linear-gradient(to bottom right, #fff, #f0f5ff);
+    }
+
+    .role-card.traveler:hover {
+      background: linear-gradient(to bottom right, #fff, #f0fff5);
+    }
+
+    .select-btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: #4B0082;
+      color: white;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+
+    .select-btn:hover {
+      background: #6A0DAD;
+    }
+
+    .footer {
+      background: #4B0082;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Carpooling GDG</h1>
+  </header>
+
+  <div class="container">
+    <div class="welcome-section">
+      <h2>Choose Your Role</h2>
+      <p>Your trusted platform for safe and convenient carpooling.</p>
+    </div>
+
+    <div class="role-selection">
+      <a href="driver.html" class="role-card driver">
+        <h3>Driver</h3>
+        <p>Share your ride with others and earn while helping them reach their destination.</p>
+        <span class="select-btn">Select Role</span>
+      </a>
+
+      <a href="traveler.html" class="role-card traveler">
+        <h3>Traveler</h3>
+        <p>Find convenient rides to your destination with verified drivers.</p>
+        <span class="select-btn">Select Role</span>
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 AutoCarPool. All rights reserved.</p>
+  </footer>
+</body>
+</html> 
