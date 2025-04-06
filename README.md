@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/79a31a20-3e6a-43f4-ae21-8dcf884f51a4)# Carpooling GDG (Solution Challenge prototype )
+# Carpooling GDG (Solution Challenge prototype )
 
 A web-based carpooling platform designed to connect drivers and travelers, making ride-sharing easy and efficient.
 
@@ -62,7 +62,7 @@ A web-based carpooling platform designed to connect drivers and travelers, makin
 This project was built with the collaboration of:
 
 - **Yash Mehta** - Project Lead,
-- Yash Khatra - Developer,
-- Swarangi Mangaonkar– Developer,
-- Kabirji Vishwakarma - Project Designer.
+- **Yash Khatra** - Developer,
+- **Swarangi Mangaonkar** – Developer,
+- **Kabirji Vishwakarma** - Project Designer.
  
